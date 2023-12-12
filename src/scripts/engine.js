@@ -1,5 +1,6 @@
 const pianoKeys = document.querySelectorAll(".piano-keys .key"); // Pega todas as teclas
-
+const volumeSlider = document.querySelector(".volume-slider input"); // Pega o input range
+const keysCheck = document.querySelector(".keys-check input");
 
 let mapedKeys = []; // Salva todas as teclas disponíveis/mapeadas
 
@@ -39,3 +40,14 @@ pianoKeys.forEach((key) => {
       playTune(e.key);
     }
   });
+
+
+  const handleVolume = (e) => {
+    // console.log(e.target.value)
+    audio.volume = e.target.value; // Controla o volume
+  };
+  
+
+  
+  volumeSlider.addEventListener("input", handleVolume);
+  
