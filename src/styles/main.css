@@ -1,0 +1,90 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e3f2fd;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 78rem;
+    border-radius: 2rem;
+    padding: 3.5rem 4rem;
+    background-color: black;
+}
+
+.container header {
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 1.6rem;
+}
+
+header .column {
+    display: flex;
+    align-items: center;
+}
+
+header .column span {
+    font-weight: 500;
+    margin-right: 1.5rem;
+    font-size: 1.19rem;
+}
+
+.volume-slider input {
+    /* Modifica a cor acentuada */
+    accent-color: #fff;
+}
+
+
+/* Input checkbox */
+.keys-check input {
+    width: 6rem;
+    height: 3rem;
+
+    appearance: none;
+    /* Remove o estilo do input */
+
+    /* Estilização da aparência */
+    border-radius: 3rem;
+    background-color: #4b4b4b;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* Bolinha do input checked */
+.keys-check input::before {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    background-color: #8c8c8c;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit;
+    position: absolute;
+    transform: translateY(-50%); /*CEntraliza a bolinha*/
+    transition: all 0.3s ease;
+}
+
+/* Movimenta a bolinha ao check do input */
+.keys-check input:checked::before {
+    left: 2.1rem;
+    background-color: #fff;
+}
+
+/* Container das teclas */
+.piano-keys {
+    display: flex;
+    margin-top: 4rem;
+  }
