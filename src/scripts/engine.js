@@ -47,7 +47,13 @@ pianoKeys.forEach((key) => {
     audio.volume = e.target.value; // Controla o volume
   };
   
-
+//   Exibe/oculta letras das teclas
+  const showHideKeys = () => {
+    pianoKeys.forEach((key) => key.classList.toggle("hide"));
+  };
   
+  // Evento para aumentar/abaixar o som
   volumeSlider.addEventListener("input", handleVolume);
   
+  // Evento para mostrar/ocultar as letras das teclas
+  keysCheck.addEventListener("click", showHideKeys);
